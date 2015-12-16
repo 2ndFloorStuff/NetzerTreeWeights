@@ -29,6 +29,9 @@ When you click the **Knit** button a document will be generated that includes bo
 # follow instructions at < https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN >
 # 1.)The core software development utilities required for R package development can be obtained from the "Rtools**.exe"" download on CRAN: https://cran.rstudio.com/bin/windows/Rtools/.
 # 2.) To build manuals and vignettes you'll also need to install the MikTeX LaTeX distribution for Windows which you can download from here: http://miktex.org/download.
+#use the create.project() or package.skeleton()  function to start the project/package
+#vignette("roxygen2",package="roxygen2")
+#This is a change to test the Github repository pull request
 
 summary(cars)
 ```
