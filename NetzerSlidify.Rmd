@@ -32,6 +32,8 @@ When you click the **Knit** button a document will be generated that includes bo
 #use the create.project() or package.skeleton()  function to start the project/package
 #vignette("roxygen2",package="roxygen2")
 #This is a change to test the Github repository pull request
+#setwd("C:/Users/Brad/Dropbox/Rstudio/NetzerTreeWeights")
+
 
 summary(cars)
 ```
