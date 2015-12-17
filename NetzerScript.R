@@ -1,4 +1,5 @@
 # R Script for doing analysis
+library(ggplot2)
 #loading in the tree data and taking a look at it
 WtData<-read.table(file="NetzerReportSampleTreeData.csv",header=TRUE,sep=",")
 View(WtData)
