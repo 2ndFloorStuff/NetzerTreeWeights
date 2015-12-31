@@ -1,0 +1,54 @@
+---
+title: "StartingWithSlidify"
+author: "Bradford Bender"
+date: "December 30, 2015"
+output: ioslides_presentation
+runtime: shiny
+---
+
+## Shiny Presentation
+
+This R Markdown presentation is made interactive using Shiny. The viewers of the presentation can change the assumptions underlying what's presented and see the results immediately. 
+
+To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+
+## Slide with Interactive Plot
+
+```{r, echo=FALSE}
+inputPanel(
+  selectInput("n_breaks", label = "Number of bins:",
+              choices = c(10, 20, 35, 50), selected = 20),
+  
+  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+              min = 0.2, max = 2, value = 1, step = 0.2)
+)
+
+renderPlot({
+  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
+       xlab = "Duration (minutes)", main = "Geyser eruption duration")
+  
+  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
+  lines(dens, col = "blue")
+})
+```
+
+## Slide with Bullets
+
+- 1 < http://slidify.org/start.html > Getting Started with Slidify
+- 2 require(devtools)
+- 2.1 install_github ("slidify","ramnathv")
+- 2.2 install_github ("slidifyLibraries","ramnathv")
+- 3.0 Library (slidify)
+- 3.1 author("mydeck")
+- 4.0 Write in RMarkdown, separating slides with a blank line followed by 3 dashes ---
+- 5.0 slidify("index.Rmd")
+- publish(user="USER",repo="REPO")
+- Create empty repo on Github use your own github name and reponame
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+

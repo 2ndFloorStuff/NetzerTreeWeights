@@ -13,7 +13,6 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Package
-PackageUseDevtools: Yes
-PackagePath: C:/Users/Brad/Rlibrary
+PackagePath: ~/R/Library
 PackageInstallArgs: --no-multiarch --with-keep.source
 PackageRoxygenize: rd,collate,namespace
